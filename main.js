@@ -118,10 +118,6 @@ async function recognizeFormula(imageData, token, endpoint) {
   });
   const data = response.json;
   if (!data.status) {
-    throw new Error(`API error: ${data.message || "Unknown error"}`);
-  }
-  const statusCode = typeof data.status === "string" ? parseInt(data.status, 10) : data.status;
-  if (statusCode !== 1) {
     const errorMessages = {
       0: "Recognition failed",
       [-1]: "Invalid request",
@@ -130,7 +126,8 @@ async function recognizeFormula(imageData, token, endpoint) {
       [-4]: "Rate limit exceeded",
       [-5]: "Insufficient quota"
     };
-    throw new Error(errorMessages[statusCode] || `API returned status: ${statusCode}`);
+    const code = typeof data.status === "number" ? data.status : 0;
+    throw new Error(`API error: ${errorMessages[code] || data.message || "Unknown error"}`);
   }
   return {
     latex: ((_a = data.res) == null ? void 0 : _a.latex) || "",
