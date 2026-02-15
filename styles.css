@@ -1,0 +1,146 @@
+/* ===== Modal Layout ===== */
+.formula-ocr-modal .modal-content {
+	padding: 12px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+/* ===== Toolbar ===== */
+.formula-ocr-toolbar {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	flex-wrap: wrap;
+}
+
+.formula-ocr-width-label {
+	font-size: 13px;
+	margin-left: 8px;
+	white-space: nowrap;
+}
+
+.formula-ocr-width-slider {
+	width: 80px;
+}
+
+/* ===== Canvas ===== */
+.formula-ocr-canvas-container {
+	display: flex;
+	justify-content: center;
+}
+
+.formula-ocr-canvas {
+	border: 1px solid var(--background-modifier-border);
+	border-radius: 6px;
+	background: #ffffff;
+	touch-action: none;
+	cursor: crosshair;
+	max-width: 100%;
+}
+
+/* ===== Bottom Bar ===== */
+.formula-ocr-bottom-bar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 8px;
+	flex-wrap: wrap;
+}
+
+.formula-ocr-format-toggle {
+	display: flex;
+	gap: 4px;
+}
+
+.formula-ocr-actions {
+	display: flex;
+	gap: 6px;
+}
+
+/* ===== Buttons ===== */
+.formula-ocr-btn {
+	padding: 6px 14px;
+	border-radius: 5px;
+	border: 1px solid var(--background-modifier-border);
+	background: var(--interactive-normal);
+	color: var(--text-normal);
+	cursor: pointer;
+	font-size: 13px;
+	transition: background 0.15s ease;
+}
+
+.formula-ocr-btn:hover {
+	background: var(--interactive-hover);
+}
+
+.formula-ocr-btn.is-active {
+	background: var(--interactive-accent);
+	color: var(--text-on-accent);
+	border-color: var(--interactive-accent);
+}
+
+.formula-ocr-btn-primary {
+	background: var(--interactive-accent);
+	color: var(--text-on-accent);
+	border-color: var(--interactive-accent);
+}
+
+.formula-ocr-btn-primary:hover {
+	opacity: 0.9;
+}
+
+.formula-ocr-btn.is-loading {
+	opacity: 0.6;
+	cursor: wait;
+}
+
+/* ===== Result Area ===== */
+.formula-ocr-result {
+	border: 1px solid var(--background-modifier-border);
+	border-radius: 6px;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.formula-ocr-confidence {
+	font-size: 12px;
+	color: var(--text-muted);
+}
+
+.formula-ocr-latex-preview {
+	background: var(--background-secondary);
+	padding: 6px 10px;
+	border-radius: 4px;
+	overflow-x: auto;
+}
+
+.formula-ocr-latex-preview code {
+	font-size: 13px;
+	word-break: break-all;
+}
+
+.formula-ocr-render-preview {
+	padding: 8px;
+	text-align: center;
+	min-height: 40px;
+}
+
+/* ===== Mobile Optimizations ===== */
+.is-mobile .formula-ocr-modal {
+	width: 95vw;
+	max-width: 95vw;
+	height: auto;
+	max-height: 90vh;
+}
+
+.is-mobile .formula-ocr-modal .modal-content {
+	padding: 8px;
+}
+
+.is-mobile .formula-ocr-btn {
+	padding: 8px 16px;
+	font-size: 14px;
+}

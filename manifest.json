@@ -1,0 +1,9 @@
+{
+	"id": "formula-ocr",
+	"name": "Formula OCR",
+	"version": "1.0.0",
+	"minAppVersion": "0.15.0",
+	"description": "Handwrite math formulas on a canvas and recognize them as LaTeX using SimpleTex API.",
+	"author": "Formula OCR",
+	"isDesktopOnly": false
+}
