@@ -5,19 +5,22 @@ Handwrite math formulas on a canvas and recognize them as LaTeX using [SimpleTex
 ## Features
 
 - **Canvas Drawing**: Touch and mouse support, optimized for mobile devices
+- **Pen & Eraser**: Switch between pen and eraser mode to refine your drawing
 - **Stroke Controls**: Undo, clear, adjustable pen width and color
 - **Formula Recognition**: Powered by SimpleTex OCR (turbo / standard models)
+- **Editable Result**: Edit the recognized LaTeX text before inserting
+- **Live Preview**: Real-time MathJax preview that updates as you edit
 - **Format Options**: Insert as inline `$...$` or block `$$...$$`
-- **Live Preview**: Preview recognized LaTeX before inserting
+- **Redraw**: Go back to the canvas to re-draw if the result is wrong
 - **One-tap Insert**: Insert result at cursor position in the editor
 
-## Demo
+## Usage
 
-1. Open command palette → **手写公式识别**
-2. Draw your formula on the canvas
-3. Tap **Recognize**
-4. Review the LaTeX result and preview
-5. Tap **Insert** to place it in your note
+1. Open command palette → **Handwritten Formula Recognition**
+2. Draw your formula on the canvas (use Pen/Eraser/Undo/Clear to refine)
+3. Tap **Recognize** to send to SimpleTex API
+4. Edit the LaTeX result if needed, preview updates in real-time
+5. Tap **Redraw** to go back and re-draw, or **Insert** to place the formula in your note
 
 ## Installation
 
